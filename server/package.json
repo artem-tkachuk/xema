@@ -1,0 +1,29 @@
+{
+  "name": "xema",
+  "version": "1.0.0",
+  "description": "Flareup and trigger tracking app for eczema patients",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artem-tkachuk/xema.git"
+  },
+  "keywords": [
+    "Health++",
+    "eczema",
+    "healthcare",
+    "iOS"
+  ],
+  "author": "Artem Tkachuk, Ally Nakamura, Jennifer Xu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/artem-tkachuk/xema/issues"
+  },
+  "homepage": "https://github.com/artem-tkachuk/xema#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
