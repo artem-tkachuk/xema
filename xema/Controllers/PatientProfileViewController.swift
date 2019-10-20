@@ -9,14 +9,23 @@
 import UIKit
 import SwiftKeychainWrapper
 import Alamofire
+import FSCalendar
 
 class PatientProfileViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var calendar: FSCalendar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
+    
+ 
+    
+    
+    /// Setup without selectable date range
     
     let APP_ID = "https://xema-256421.appspot.com"
     

@@ -9,7 +9,10 @@
 import UIKit
 import SwiftKeychainWrapper
 
+
+
 class RateFlareViewController: UIViewController {
+    
     
     let retrievedString: String? = KeychainWrapper.standard.string(forKey: "token")
     
@@ -18,6 +21,11 @@ class RateFlareViewController: UIViewController {
             print(token)
             super.viewDidLoad()
         }
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
 }

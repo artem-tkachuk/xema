@@ -10,4 +10,5 @@ target 'xema' do
   pod 'Alamofire-Synchronous', '~> 4.0'
   pod 'SwiftyJSON'
   pod 'SwiftKeychainWrapper'
+  pod 'FSCalendar'
 end
