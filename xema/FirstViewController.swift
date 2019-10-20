@@ -10,8 +10,10 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var loginButt: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButt.backgroundColor = .blue
         // Do any additional setup after loading the view.
         //hello
     }
