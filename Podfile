@@ -7,6 +7,7 @@ target 'xema' do
 
   # Pods for xema
   pod 'Alamofire'
+  pod 'Alamofire-Synchronous', '~> 4.0'
   pod 'SwiftyJSON'
-
+  pod 'SwiftKeychainWrapper'
 end

@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SwiftKeychainWrapper
 
 class SignUpViewController: UIViewController {
     
@@ -47,10 +48,23 @@ class SignUpViewController: UIViewController {
         Alamofire.request(url, method: .post, parameters: parameters).responseJSON {
             response in
             if response.result.isSuccess {
+                
                 print("Success! The user is created!")  //debugging
-                let tokenJSON : JSON = JSON(response.result.value!)
+                let data : JSON = JSON(response.result.value!)
                 //look for this method inside the current class
-                self.updateUserDataModel(json: tokenJSON)
+                //self.updateUserDataModel(json: tokenJSON)
+                print(data)
+                
+                if let token = data["token"].string, let patientID = data["patientID"].string {
+                    let savePatientID : Bool = KeychainWrapper.standard.set(patientID, forKey: "patientID")
+                    let saveToken: Bool = KeychainWrapper.standard.set(token, forKey: "token")
+                    
+                    print(savePatientID)
+                    print(saveToken)
+                    
+                    self.performSegue(withIdentifier: "goToFlareUp", sender: self)
+                }
+                
             } else {
                 print("Error \(String(describing: response.result.error))")
                 //self.cityLabel.text = "Connection issues"

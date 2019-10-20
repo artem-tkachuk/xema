@@ -27,7 +27,7 @@ exports.postAddPatient = async (req, res) => {
 
             await new Session({ user: payload.id, token: token }).save();
 
-            res.json({ token: token });
+            res.json({ patientID: patient.id, token: token });
         })
         .catch(err => console.log(err));
 };
@@ -50,7 +50,7 @@ exports.postLogin = async (req, res) => {
 
                     await new Session({ user: payload.id, token: token }).save();
 
-                    res.json({ token: token });
+                    res.json({ patientID: patient.id, token: token });
                 } else {
                     res.sendStatus(401);
                 }
