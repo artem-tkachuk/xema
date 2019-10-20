@@ -59,8 +59,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    ////                //!!!!! store JWT!!!!
-    ////                // pass JWT in each request
+    
     
     func updateUserDataModel(json: JSON) {
         if let token = json["token"].string{

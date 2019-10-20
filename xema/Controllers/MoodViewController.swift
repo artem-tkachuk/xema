@@ -12,22 +12,41 @@ import SwiftyJSON
 
 class MoodViewController : UIViewController {
     
+    var mood : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBOutlet var Moods: [UIButton]!
+    @IBAction func normal(_ sender: Any) {
+        mood = "Normal"
+        performSegue(withIdentifier: "toChoosingFood", sender: self)
+    }
+    
+    
+    @IBAction func anxious(_ sender: Any) {
+        mood = "Anxious"
+        performSegue(withIdentifier: "toChoosingFood", sender: self)
+
+    }
+    
+    @IBAction func Irritable(_ sender: Any) {
+        mood = "Irritable"
+        performSegue(withIdentifier: "toChoosingFood", sender: self)
+
+    }
+    
+    @IBAction func Sad(_ sender: Any) {
+        mood = "Sad"
+        performSegue(withIdentifier: "toChoosingFood", sender: self)
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        print(Moods ?? "Null")
-        if segue.destination is FoodViewController
+        if let vc = segue.destination as? FoodViewController
         {
-            if let vc = segue.destination as? FoodViewController
-            {
-                vc.Moods = Moods
-                performSegue(withIdentifier: "toChoosingFood", sender: self)
-            }
+            vc.mood = mood
         }
     }
 }

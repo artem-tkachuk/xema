@@ -11,6 +11,7 @@ const mongo = require('./database/mongo');  //data
 //import routes & controllers
 const authRoutes = require('./routes/auth');
 const addDataRoutes = require('./routes/addData');
+const getDataRoutes = require('./routes/getData');
 const errorController = require('./controllers/404');
 
 //authentication
@@ -24,6 +25,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 //Use routes
 app.use(authRoutes);
 app.use(addDataRoutes);
+app.use(getDataRoutes);
 app.use(errorController.get404);
 
 mongo(app, PORT);

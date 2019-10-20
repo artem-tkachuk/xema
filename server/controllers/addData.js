@@ -2,8 +2,9 @@ const Session = require('../models/session');
 const Trigger = require('../models/trigger');
 
 exports.postAddData = async (req, res) => {
+    const session = await Session.findOne({token: req.body.token});
     const triggerData = {
-        _id: await Session.findOne({token: req.body.token})._id,
+        id: session.id,
         severity: req.body.severity,
         food: req.body.food,
         material: req.body.material,
@@ -13,9 +14,11 @@ exports.postAddData = async (req, res) => {
 
     await new Trigger(triggerData)
         .save()
-        .then((trigger) => {
+        .then(async (trigger) => {
             console.log(`Logged the new trigger`);
-            res.sendStatus(200);
+            res.json({
+                "message": "Success!"
+            })
         })
         .catch(err => {
             console.log(err);

@@ -8,21 +8,23 @@
 
 import UIKit
 import SwiftKeychainWrapper
+import SwiftyJSON
 import Alamofire
 import FSCalendar
 
 class PatientProfileViewController: UIViewController {
     
+    var data : JSON = JSON.init()
     
     @IBOutlet weak var calendar: FSCalendar!
-    
     
     
     let APP_ID = "https://xema-256421.appspot.com"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(data)
+        //conditionally display events based on the chosen calendar day
         // Do any additional setup after loading the view.
     }
     
