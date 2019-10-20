@@ -16,6 +16,10 @@ class PatientProfileViewController: UIViewController {
     
     @IBOutlet weak var calendar: FSCalendar!
     
+    
+    
+    let APP_ID = "https://xema-256421.appspot.com"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +31,7 @@ class PatientProfileViewController: UIViewController {
     
     /// Setup without selectable date range
     
-    let APP_ID = "https://xema-256421.appspot.com"
+    
     
     @IBAction func logoutPressed(_ sender: Any) {
         let url = APP_ID + "/logout"

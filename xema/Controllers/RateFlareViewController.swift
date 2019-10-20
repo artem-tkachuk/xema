@@ -8,11 +8,11 @@
 
 import UIKit
 import SwiftKeychainWrapper
-
+import Alamofire
+import SwiftyJSON
 
 
 class RateFlareViewController: UIViewController {
-    
     
     let retrievedString: String? = KeychainWrapper.standard.string(forKey: "token")
     
@@ -23,9 +23,37 @@ class RateFlareViewController: UIViewController {
         }
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
     
+    @IBAction func saveDataPressed(_ sender: Any) {
+        //TODO compose parameters
+        if let token: String = KeychainWrapper.standard.string(forKey: "token") {
+            print(token)
+            
+            let APP_ID = "https://xema-256421.appspot.com"
+            let url = APP_ID + "/add-data"
+            
+            //put chosen items here
+            let parameters : [String : String] = ["token": token, "severity": "", "food": "", "materials": "", "mood": ""]
+            
+            print(parameters)
+            
+            Alamofire.request(url, method: .post, parameters: parameters).responseJSON {
+                response in
+                if response.result.isSuccess {
+                    
+                    print("Success! The data is logged!")  //debugging
+                    let data : JSON = JSON(response.result.value!)
+                    print(data)
+                self.performSegue(withIdentifier: "goToProfileScreen", sender: self)
+                    
+                    } else {
+                    print("Error \(String(describing: response.result.error))")
+                    //self.cityLabel.text = "Connection issues"
+                }
+            }
+        }
+        }
 }

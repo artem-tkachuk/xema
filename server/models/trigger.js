@@ -1,14 +1,33 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
 
 const triggerSchema = new mongoose.Schema({
-    _id, 
+    _id: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    severity: {
+        type: String,
+        required: true
+    },
+    food: {
+        type: String,
+        required: true
+    },
+    material: {
+        type: String,
+        required: true
+    },
+    mood: {
+        type: String,
+        required: true
+    },
+    date: {
+        type: Date,
+        required: true
+    }
 });
 
-patientSchema.methods.validPassword = async function(password) {
-    return bcrypt.compare(password, this.password);
-};
+const Trigger = mongoose.model('Trigger', triggerSchema, 'triggers');
 
-const Patient = mongoose.model('Patient', patientSchema, 'patients');
-
-module.exports = Patient;
+module.exports = Trigger;
