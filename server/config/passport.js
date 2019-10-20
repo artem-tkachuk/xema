@@ -1,4 +1,4 @@
-const Patient = require('../models/patient');
+const Session = require('../models/session');
 
 const passport = require('passport');
 const JwtStrategy = require('passport-jwt').Strategy;
@@ -6,19 +6,17 @@ const ExtractJwt = require('passport-jwt').ExtractJwt;
 const config = require('./config');
 
 const options = {
-    jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+    jwtFromRequest: ExtractJwt.fromBodyField('token'),
     secretOrKey: config.jwtSecret,
 };
 
 const passportConfig = (payload, done) => {
-    Patient.findOne({_id: payload.id}, (err, patient) => {
+    Session.findOne({user: payload.id}, (err, patient) => {
         if (err) {
             return done(err, false);
         }
         if (patient) {
-            return done(null, {
-                id: patient.id
-            });
+            return done(null, patient);
         } else {
             return done(null, false);
         }

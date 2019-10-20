@@ -34,14 +34,14 @@ class signUpViewController: UIViewController {
 
 func postSignUp(url : String, parameters : [String: String]) {
     Alamofire.request(url, method: .post, parameters: parameters).responseJSON {
-        if response.result.isSuccess {
-            print("Success! A user is successfully signed up!")
-            
+        if response. {
+    
             let weatherJSON : JSON = JSON(response.result.value!) //force unwrapping
             self.updateWeatherData(json: weatherJSON)             //look for this method inside the current class
             
             //!!!!! store JWT!!!!
             //check for repeatPassword == Password
+            // pass JWT in each request
             
         } else {
             print("Error \(String(describing: response.result.error))")

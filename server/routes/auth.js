@@ -1,12 +1,15 @@
+
+
 const express = require('express');
 const router = express.Router();
+const passport = require('passport');
+const config = require('../config/config');
 
 const authControllers = require('../controllers/auth');
 
-//probably add routes where auth is needed only
-// router.post('/token', authControllers.postToken);
+
 router.post('/add-patient', authControllers.postAddPatient);
 router.post('/login', authControllers.postLogin);
-router.post('/logout', authControllers.postLogout);
+router.post('/logout', passport.authenticate('jwt', config.jwtSession), authControllers.postLogout);
 
 module.exports = router;
