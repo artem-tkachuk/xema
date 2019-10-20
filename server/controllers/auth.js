@@ -1,38 +1,14 @@
+const Patient = require('../models/patient');
+const Session = require('../models/session');
+
 const jwt = require('jwt-simple');
 const config = require('../config/config');
 const hash = require('../util/hashPassword');
 
-const Patient = require('../models/patient');
-
-exports.postToken = async (req, res) => {
-    const email = req.body.email;
-    const password = req.body.password;
-
-    if (email && password) {
-        await Patient
-            .findOne({email: email})
-            .then((patient, err) => {
-                if (err) {
-                    throw err;
-                }
-                if (patient) {
-                    const payload = { id: patient.id };
-                    res.json({
-                        token: jwt.encode(payload, config.jwtSecret)
-                    });
-                } else {
-                    res.sendStatus(401);
-                }
-            })
-            .catch(err => console.log(err));
-    } else {
-        res.sendStatus(401);
-    }
-};
-
+//sign up
 exports.postAddPatient = async (req, res) => {
 
-    console.log(req.body);  //TODO remove
+    console.log(req.body);  //TODO remove, but make sure the iOS app delivers the data first
 
     const patientData = {
         username: req.body.username,
@@ -45,14 +21,50 @@ exports.postAddPatient = async (req, res) => {
     await new Patient(patientData)
         .save()
         .then(async (patient) => {
-            console.log(`New patient with id ${patient._id} is created!`);
+            console.log(`New patient with id ${patient.id} is created!`);
+            const payload = { id: patient.id };
+            const token = jwt.encode(payload, config.jwtSecret);
+
+            await new Session({ user: payload.id, token: token }).save();
+
+            res.json({ token: token });
         })
         .catch(err => console.log(err));
 };
 
-//TODO change
-exports.getPatient = async (req, res) => {
-    const patient = await Patient.findById(req.user.id);
-    res.json(patient);
+//login
+exports.postLogin = async (req, res) => {
+    const email = req.body.email;
+    const password = req.body.password;
+
+    if (email && password) {
+        await Patient
+            .findOne({email: email})
+            .then(async (patient, err) => {
+                if (err) {
+                    throw err;
+                }
+                if (patient && await patient.validPassword(password)) {
+                    const payload = {id: patient.id};
+                    const token = jwt.encode(payload, config.jwtSecret);
+
+                    await new Session({ user: payload.id, token: token }).save();
+
+                    res.json({ token: token });
+                } else {
+                    res.sendStatus(401);
+                }
+            })
+            .catch(err => console.log(err));
+    } else {
+        res.sendStatus(401);
+    }
 };
 
+//logout
+exports.postLogout = async (req, res) => {
+    await Session.findOneAndRemove({token: req.body.token});
+    res.json({
+       'code': 200
+    });
+};
