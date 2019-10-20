@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		0E9653C8235C434B00EFA682 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9653C7235C434B00EFA682 /* Alamofire.framework */; };
-		0E9653CA235C45F200EFA682 /* userDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9653C9235C45F200EFA682 /* userDataModel.swift */; };
+		0E9653CA235C45F200EFA682 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9653C9235C45F200EFA682 /* UserDataModel.swift */; };
+		0E9653CD235C71AF00EFA682 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9653CC235C71AF00EFA682 /* LoginViewController.swift */; };
 		0EA6A43F235BAB3000C80B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6A43E235BAB3000C80B60 /* AppDelegate.swift */; };
 		0EA6A441235BAB3000C80B60 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6A440235BAB3000C80B60 /* FirstViewController.swift */; };
 		0EA6A443235BAB3000C80B60 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6A442235BAB3000C80B60 /* SecondViewController.swift */; };
 		0EA6A446235BAB3000C80B60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6A444235BAB3000C80B60 /* Main.storyboard */; };
 		0EA6A448235BAB3100C80B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6A447235BAB3100C80B60 /* Assets.xcassets */; };
 		0EA6A44B235BAB3100C80B60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6A449235BAB3100C80B60 /* LaunchScreen.storyboard */; };
-		0EA6A455235C3E1700C80B60 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6A454235C3E1700C80B60 /* signUpViewController.swift */; };
+		0EA6A455235C3E1700C80B60 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6A454235C3E1700C80B60 /* SignUpViewController.swift */; };
 		FA03FFBE22C783193DA9D41C /* Pods_xema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9C201C960ADA758974456C /* Pods_xema.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E9653C7235C434B00EFA682 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E9653C9235C45F200EFA682 /* userDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDataModel.swift; sourceTree = "<group>"; };
+		0E9653C9235C45F200EFA682 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		0E9653CC235C71AF00EFA682 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0EA6A43B235BAB3000C80B60 /* xema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA6A43E235BAB3000C80B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EA6A440235BAB3000C80B60 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -30,7 +32,7 @@
 		0EA6A447235BAB3100C80B60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EA6A44A235BAB3100C80B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EA6A44C235BAB3100C80B60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0EA6A454235C3E1700C80B60 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
+		0EA6A454235C3E1700C80B60 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1D9C201C960ADA758974456C /* Pods_xema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD03308F1EDE4DB261A23636 /* Pods-xema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xema.debug.xcconfig"; path = "Target Support Files/Pods-xema/Pods-xema.debug.xcconfig"; sourceTree = "<group>"; };
 		FCA8E87FF72D7712D42D4F29 /* Pods-xema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xema.release.xcconfig"; path = "Target Support Files/Pods-xema/Pods-xema.release.xcconfig"; sourceTree = "<group>"; };
@@ -52,7 +54,7 @@
 		0E9653CB235C45F700EFA682 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0E9653C9235C45F200EFA682 /* userDataModel.swift */,
+				0E9653C9235C45F200EFA682 /* UserDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,7 +104,8 @@
 			children = (
 				0EA6A440235BAB3000C80B60 /* FirstViewController.swift */,
 				0EA6A442235BAB3000C80B60 /* SecondViewController.swift */,
-				0EA6A454235C3E1700C80B60 /* signUpViewController.swift */,
+				0EA6A454235C3E1700C80B60 /* SignUpViewController.swift */,
+				0E9653CC235C71AF00EFA682 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -240,10 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E9653CD235C71AF00EFA682 /* LoginViewController.swift in Sources */,
 				0EA6A443235BAB3000C80B60 /* SecondViewController.swift in Sources */,
 				0EA6A43F235BAB3000C80B60 /* AppDelegate.swift in Sources */,
-				0E9653CA235C45F200EFA682 /* userDataModel.swift in Sources */,
-				0EA6A455235C3E1700C80B60 /* signUpViewController.swift in Sources */,
+				0E9653CA235C45F200EFA682 /* UserDataModel.swift in Sources */,
+				0EA6A455235C3E1700C80B60 /* SignUpViewController.swift in Sources */,
 				0EA6A441235BAB3000C80B60 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

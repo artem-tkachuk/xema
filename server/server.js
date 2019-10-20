@@ -6,8 +6,7 @@ const { passportStrategyConfig } = require('./config/passport');
 const app = express();
 const PORT = process.env.PORT || 8080;      // Listen to the App Engine-specified port, or 8080 otherwise
 
-//data
-const mongo = require('./database/mongo');
+const mongo = require('./database/mongo');  //data
 
 //import routes & controllers
 const authRoutes = require('./routes/auth');
