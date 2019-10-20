@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const dbUser = require('../keys/credentials');
 
-const mongoUrl = `mongodb+srv://${dbUser.username}:${dbUser.password}@${dbUser.host}/test?retryWrites=true&w=majority`;
+const mongoUrl = `mongodb+srv://${dbUser.username}:${dbUser.password}@${dbUser.host}/${dbUser.dbName}?retryWrites=true&w=majority`;
 
 const mongo = (app, PORT) => {
     mongoose
@@ -11,10 +11,10 @@ const mongo = (app, PORT) => {
             if (!err) {
                 console.log('Connected to mongo!');
                 app.listen(PORT);
-                console.log(`Server listening on port ${PORT}...`);
+                console.log(`Server listening on port ${PORT}!`);
             }
         })
         .catch(err => console.log(err));
-}
+};
 
 module.exports = mongo;

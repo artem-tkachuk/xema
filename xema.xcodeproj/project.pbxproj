@@ -3,19 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E9653C8235C434B00EFA682 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9653C7235C434B00EFA682 /* Alamofire.framework */; };
+		0E9653CA235C45F200EFA682 /* userDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9653C9235C45F200EFA682 /* userDataModel.swift */; };
 		0EA6A43F235BAB3000C80B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6A43E235BAB3000C80B60 /* AppDelegate.swift */; };
 		0EA6A441235BAB3000C80B60 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6A440235BAB3000C80B60 /* FirstViewController.swift */; };
 		0EA6A443235BAB3000C80B60 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6A442235BAB3000C80B60 /* SecondViewController.swift */; };
 		0EA6A446235BAB3000C80B60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6A444235BAB3000C80B60 /* Main.storyboard */; };
 		0EA6A448235BAB3100C80B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6A447235BAB3100C80B60 /* Assets.xcassets */; };
 		0EA6A44B235BAB3100C80B60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6A449235BAB3100C80B60 /* LaunchScreen.storyboard */; };
+		0EA6A455235C3E1700C80B60 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6A454235C3E1700C80B60 /* signUpViewController.swift */; };
+		FA03FFBE22C783193DA9D41C /* Pods_xema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9C201C960ADA758974456C /* Pods_xema.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E9653C7235C434B00EFA682 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E9653C9235C45F200EFA682 /* userDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDataModel.swift; sourceTree = "<group>"; };
 		0EA6A43B235BAB3000C80B60 /* xema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA6A43E235BAB3000C80B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EA6A440235BAB3000C80B60 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +30,10 @@
 		0EA6A447235BAB3100C80B60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EA6A44A235BAB3100C80B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EA6A44C235BAB3100C80B60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EA6A454235C3E1700C80B60 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
+		1D9C201C960ADA758974456C /* Pods_xema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD03308F1EDE4DB261A23636 /* Pods-xema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xema.debug.xcconfig"; path = "Target Support Files/Pods-xema/Pods-xema.debug.xcconfig"; sourceTree = "<group>"; };
+		FCA8E87FF72D7712D42D4F29 /* Pods-xema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xema.release.xcconfig"; path = "Target Support Files/Pods-xema/Pods-xema.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E9653C8235C434B00EFA682 /* Alamofire.framework in Frameworks */,
+				FA03FFBE22C783193DA9D41C /* Pods_xema.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E9653CB235C45F700EFA682 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E9653C9235C45F200EFA682 /* userDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0EA6A432235BAB3000C80B60 = {
 			isa = PBXGroup;
 			children = (
 				0EA6A43D235BAB3000C80B60 /* xema */,
 				0EA6A43C235BAB3000C80B60 /* Products */,
+				9F6669800A876EF2E5D8642F /* Pods */,
+				8624EA2A88D185CB00E80AB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +79,50 @@
 			isa = PBXGroup;
 			children = (
 				0EA6A43E235BAB3000C80B60 /* AppDelegate.swift */,
-				0EA6A440235BAB3000C80B60 /* FirstViewController.swift */,
-				0EA6A442235BAB3000C80B60 /* SecondViewController.swift */,
-				0EA6A444235BAB3000C80B60 /* Main.storyboard */,
+				0EA6A453235C3DF000C80B60 /* View */,
 				0EA6A447235BAB3100C80B60 /* Assets.xcassets */,
 				0EA6A449235BAB3100C80B60 /* LaunchScreen.storyboard */,
 				0EA6A44C235BAB3100C80B60 /* Info.plist */,
+				0EA6A456235C3E1C00C80B60 /* Controllers */,
+				0E9653CB235C45F700EFA682 /* Model */,
 			);
 			path = xema;
+			sourceTree = "<group>";
+		};
+		0EA6A453235C3DF000C80B60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EA6A444235BAB3000C80B60 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0EA6A456235C3E1C00C80B60 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0EA6A440235BAB3000C80B60 /* FirstViewController.swift */,
+				0EA6A442235BAB3000C80B60 /* SecondViewController.swift */,
+				0EA6A454235C3E1700C80B60 /* signUpViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8624EA2A88D185CB00E80AB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E9653C7235C434B00EFA682 /* Alamofire.framework */,
+				1D9C201C960ADA758974456C /* Pods_xema.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F6669800A876EF2E5D8642F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD03308F1EDE4DB261A23636 /* Pods-xema.debug.xcconfig */,
+				FCA8E87FF72D7712D42D4F29 /* Pods-xema.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EA6A44F235BAB3100C80B60 /* Build configuration list for PBXNativeTarget "xema" */;
 			buildPhases = (
+				78523B5264DF2229ADF41824 /* [CP] Check Pods Manifest.lock */,
 				0EA6A437235BAB3000C80B60 /* Sources */,
 				0EA6A438235BAB3000C80B60 /* Frameworks */,
 				0EA6A439235BAB3000C80B60 /* Resources */,
+				1BD429C0AC381B823F46BB36 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +193,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1BD429C0AC381B823F46BB36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-xema/Pods-xema-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-xema/Pods-xema-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-xema/Pods-xema-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78523B5264DF2229ADF41824 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-xema-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0EA6A437235BAB3000C80B60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +242,8 @@
 			files = (
 				0EA6A443235BAB3000C80B60 /* SecondViewController.swift in Sources */,
 				0EA6A43F235BAB3000C80B60 /* AppDelegate.swift in Sources */,
+				0E9653CA235C45F200EFA682 /* userDataModel.swift in Sources */,
+				0EA6A455235C3E1700C80B60 /* signUpViewController.swift in Sources */,
 				0EA6A441235BAB3000C80B60 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +388,7 @@
 		};
 		0EA6A450235BAB3100C80B60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD03308F1EDE4DB261A23636 /* Pods-xema.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +406,7 @@
 		};
 		0EA6A451235BAB3100C80B60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCA8E87FF72D7712D42D4F29 /* Pods-xema.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

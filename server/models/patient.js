@@ -9,24 +9,20 @@ const patientSchema = new mongoose.Schema({
        unique: true,
        lowercase: true
    },
-
     password: {
        type: String,
        required: true
     },
-
     email: {
        type: String,
         required: true,
         unique: true,
         lowercase: true
     },
-
     firstName: {
        type: String,
        required: true
     },
-
     lastName: {
        type: String,
        required: true
@@ -35,6 +31,8 @@ const patientSchema = new mongoose.Schema({
 
 patientSchema.methods.validPassword = async function(password) {
     return bcrypt.compare(password, this.password);
-}
+};
 
-const Patient = mongoose.model('Patient', userSchema, 'patients');
+const Patient = mongoose.model('Patient', patientSchema, 'patients');
+
+module.exports = Patient;

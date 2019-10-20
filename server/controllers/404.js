@@ -1,3 +1,8 @@
 exports.get404 = (req, res) => {
-    res.send('Page not found');
+    res.json({
+        'error': {
+            'code': '404',
+            'message': 'Page not found!'
+        }
+    });
 };

@@ -30,8 +30,10 @@
     "connect-mongodb-session": "^2.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
+    "jwt-simple": "^0.5.6",
     "mongoose": "^5.7.5",
     "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "pusher": "^3.0.0",
     "validator": "^11.1.0"
