@@ -119,34 +119,4 @@ class RateFlareViewController: UIViewController {
             }
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? PatientProfileViewController
-        {
-            if let token: String = KeychainWrapper.standard.string(forKey: "token") {
-                print(token)
-
-                let APP_ID = "https://xema-256421.appspot.com"
-                let url = APP_ID + "/get-data"
-
-
-                //put chosen items here
-                let parameters : [String : String] = ["token": token]
-
-                Alamofire.request(url, method: .post, parameters: parameters).responseJSON {
-                    (response) in
-
-                    if response.result.isSuccess {
-                        print("Success! That's the data!")  //debugging
-                        let data : JSON = JSON(response.result.value!)
-                        print(data)
-                        vc.data = data
-                    } else {
-                        print("Error \(String(describing: response.result.error))")
-                        //self.cityLabel.text = "Connection issues"
-                    }
-                }
-            }
-        }
-    }
 }

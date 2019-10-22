@@ -14,9 +14,11 @@ import FSCalendar
 
 class PatientProfileViewController: UIViewController {
     
-    var data : JSON = JSON.init()
+    var data : JSON = [:]
     
+    @IBOutlet weak var Severity: UILabel!
     @IBOutlet weak var calendar: FSCalendar!
+    
     
     
     let APP_ID = "https://xema-256421.appspot.com"
@@ -24,6 +26,7 @@ class PatientProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(data)
+        Severity.text = data["data"].string
         //conditionally display events based on the chosen calendar day
         // Do any additional setup after loading the view.
     }

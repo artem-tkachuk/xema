@@ -24,6 +24,7 @@
 		0EC40DC2235CFC8500018783 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC40DC1235CFC8500018783 /* MoodViewController.swift */; };
 		0EC40DC4235CFE0F00018783 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC40DC3235CFE0F00018783 /* FoodViewController.swift */; };
 		0EC40DC6235CFE3600018783 /* MaterialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC40DC5235CFE3600018783 /* MaterialViewController.swift */; };
+		0EC40DC8235D2B6C00018783 /* FSCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC40DC7235D2B6C00018783 /* FSCalendarViewController.swift */; };
 		FA03FFBE22C783193DA9D41C /* Pods_xema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9C201C960ADA758974456C /* Pods_xema.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		0EC40DC1235CFC8500018783 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
 		0EC40DC3235CFE0F00018783 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		0EC40DC5235CFE3600018783 /* MaterialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialViewController.swift; sourceTree = "<group>"; };
+		0EC40DC7235D2B6C00018783 /* FSCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarViewController.swift; sourceTree = "<group>"; };
 		1D9C201C960ADA758974456C /* Pods_xema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD03308F1EDE4DB261A23636 /* Pods-xema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xema.debug.xcconfig"; path = "Target Support Files/Pods-xema/Pods-xema.debug.xcconfig"; sourceTree = "<group>"; };
 		FCA8E87FF72D7712D42D4F29 /* Pods-xema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xema.release.xcconfig"; path = "Target Support Files/Pods-xema/Pods-xema.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				0EC40DC1235CFC8500018783 /* MoodViewController.swift */,
 				0EC40DC3235CFE0F00018783 /* FoodViewController.swift */,
 				0EC40DC5235CFE3600018783 /* MaterialViewController.swift */,
+				0EC40DC7235D2B6C00018783 /* FSCalendarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				0EC40DC6235CFE3600018783 /* MaterialViewController.swift in Sources */,
 				0EA6A441235BAB3000C80B60 /* WelcomeViewController.swift in Sources */,
 				0E9653D5235CAD4B00EFA682 /* PatientProfileViewController.swift in Sources */,
+				0EC40DC8235D2B6C00018783 /* FSCalendarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
